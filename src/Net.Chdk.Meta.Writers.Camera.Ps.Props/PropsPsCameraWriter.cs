@@ -1,39 +1,21 @@
 ﻿using Net.Chdk.Meta.Model.Camera.Ps;
+using Net.Chdk.Meta.Writers.Camera.Props;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
 namespace Net.Chdk.Meta.Writers.Camera.Ps.Props
 {
-    sealed class PropsPsCameraWriter : IPsCameraWriter
+    sealed class PropsPsCameraWriter : PropsCameraWriter<PsCameraData, PsCameraModelData, PsCardData>, IPsCameraWriter
     {
-        public void WriteCameras(string path, IDictionary<string, PsCameraData> cameras)
+        protected override void WriteModel(TextWriter writer, string id, PsCameraModelData model)
         {
-            using (var writer = File.CreateText(path))
-            {
-                WriteCameras(writer, cameras);
-            }
+            WriteRevisions(writer, id, model.Platform, model.Revisions);
         }
 
-        private static void WriteCameras(StreamWriter writer, IDictionary<string, PsCameraData> cameras)
+        private static void WriteRevisions(TextWriter writer, string id, string platform, IDictionary<string, RevisionData> revisions)
         {
-            foreach (var kvp in cameras)
-            {
-                WriteModels(writer, kvp.Key, kvp.Value);
-            }
-        }
-
-        private static void WriteModels(TextWriter writer, string id, PsCameraData camera)
-        {
-            foreach (var model in camera.Models)
-            {
-                WriteRevisions(writer, id, model.Platform, model);
-            }
-        }
-
-        private static void WriteRevisions(TextWriter writer, string id, string platform, PsCameraModelData model)
-        {
-            foreach (var kvp in model.Revisions)
+            foreach (var kvp in revisions)
             {
                 WriteRevision(writer, id, platform, kvp.Key, kvp.Value.Revision);
             }
