@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Net.Chdk.Meta.Model.Camera\src\Net.Chdk.Meta.Model.Camera\Net.Chdk.Meta.Model.Camera.csproj" />
+    <ProjectReference Include="..\..\..\Net.Chdk.Meta.Model.Camera.Ps\src\Net.Chdk.Meta.Model.Camera.Ps\Net.Chdk.Meta.Model.Camera.Ps.csproj" />
     <ProjectReference Include="..\..\..\Net.Chdk.Meta.Writers.Camera.Props\src\Net.Chdk.Meta.Writers.Camera.Props\Net.Chdk.Meta.Writers.Camera.Props.csproj" />
     <ProjectReference Include="..\..\..\Net.Chdk.Meta.Writers.Camera.Ps.Core\src\Net.Chdk.Meta.Writers.Camera.Ps.Core\Net.Chdk.Meta.Writers.Camera.Ps.Core.csproj" />
   </ItemGroup>
