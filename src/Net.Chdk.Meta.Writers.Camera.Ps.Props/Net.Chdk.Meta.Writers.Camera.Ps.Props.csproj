@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Description>CHIMP PS .properties camera metadata writer</Description>
+    <RootNamespace>Net.Chdk.Meta.Writers.Camera.Ps.Props</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+  </PropertyGroup>
+
+  <Import Project="..\..\..\Net.Chdk.Core\src\Net.Chdk.Shared\Net.Chdk.Shared.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <PackageReference Include="microsoft.extensions.dependencyinjection.abstractions" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Net.Chdk.Meta.Model.Camera\src\Net.Chdk.Meta.Model.Camera\Net.Chdk.Meta.Model.Camera.csproj" />
+    <ProjectReference Include="..\..\..\Net.Chdk.Meta.Writers.Camera.Ps.Core\src\Net.Chdk.Meta.Writers.Camera.Ps.Core\Net.Chdk.Meta.Writers.Camera.Ps.Core.csproj" />
+  </ItemGroup>
+
+</Project>
