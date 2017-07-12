@@ -8,12 +8,12 @@ namespace Net.Chdk.Meta.Writers.Camera.Ps.Props
 {
     sealed class PropsPsCameraWriter : PropsCameraWriter<PsCameraData, PsCameraModelData, PsCardData>, IPsCameraWriter
     {
-        protected override void WriteModel(TextWriter writer, string id, PsCameraModelData model)
+        protected override void WriteModel(TextWriter writer, uint id, PsCameraModelData model)
         {
             WriteRevisions(writer, id, model.Platform, model.Revisions);
         }
 
-        private static void WriteRevisions(TextWriter writer, string id, string platform, IDictionary<string, RevisionData> revisions)
+        private static void WriteRevisions(TextWriter writer, uint id, string platform, IDictionary<string, RevisionData> revisions)
         {
             foreach (var kvp in revisions)
             {
@@ -21,10 +21,10 @@ namespace Net.Chdk.Meta.Writers.Camera.Ps.Props
             }
         }
 
-        private static void WriteRevision(TextWriter writer, string id, string platform, string revisionKey, string revisionValue)
+        private static void WriteRevision(TextWriter writer, uint id, string platform, string revisionKey, string revisionValue)
         {
             var revision = GetRevision(revisionKey);
-            writer.WriteLine($"{id}-{revision}={platform}-{revisionValue}");
+            writer.WriteLine($"0x{id:x}-{revision}={platform}-{revisionValue}");
         }
 
         private static string GetRevision(string revisionKey)
