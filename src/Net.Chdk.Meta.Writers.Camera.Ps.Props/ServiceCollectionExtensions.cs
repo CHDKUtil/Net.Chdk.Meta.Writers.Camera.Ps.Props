@@ -7,7 +7,7 @@ namespace Net.Chdk.Meta.Writers.Camera.Ps.Props
         public static IServiceCollection AddPropsPsCameraWriter(this IServiceCollection serviceCollection)
         {
             return serviceCollection
-                .AddSingleton<IPsCameraWriter, PropsPsCameraWriter>();
+                .AddSingleton<IPsInnerCameraWriter, PropsPsCameraWriter>();
         }
     }
 }

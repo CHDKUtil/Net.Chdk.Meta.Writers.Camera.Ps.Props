@@ -6,7 +6,7 @@ using System.IO;
 
 namespace Net.Chdk.Meta.Writers.Camera.Ps.Props
 {
-    sealed class PropsPsCameraWriter : PropsCameraWriter<PsCameraData, PsCameraModelData, PsCardData>, IPsCameraWriter
+    sealed class PropsPsCameraWriter : PropsCameraWriter<PsCameraData, PsCameraModelData, PsCardData>, IPsInnerCameraWriter
     {
         protected override void WriteModel(TextWriter writer, uint id, PsCameraModelData model)
         {
