@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>0.3.0</Version>
+    <Version>0.4.0</Version>
+    <VersionSuffix>alpha</VersionSuffix>
     <Product>CHIMP</Product>
     <Authors>Dmitry Shechtman</Authors>
     <Copyright>Copyright © 2017 Dmitry Shechtman</Copyright>
@@ -16,9 +17,9 @@
   <PropertyGroup>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>Net.Chdk.Meta.Writers.Camera.Ps.Props</Title>
-    <PackageVersion>$(Version)-alpha</PackageVersion>
+    <PackageVersion>$(Version)-$(VersionSuffix)</PackageVersion>
+    <PackageLicenseExpression>GPL-2.0-or-later</PackageLicenseExpression>
     <PackageIconUrl>https://raw.githubusercontent.com/CHDKUtil/CHIMP/master/tiny.png</PackageIconUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/CHDKUtil/Net.Chdk.Meta.Writers.Camera.Ps.Props/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/CHDKUtil/Net.Chdk.Meta.Writers.Camera.Ps.Props</PackageProjectUrl>
     <RepositoryUrl>https://github.com/CHDKUtil/Net.Chdk.Meta.Writers.Camera.Ps.Props</RepositoryUrl>
     <PackageTags>chimp meta writer camera ps props</PackageTags>
@@ -36,8 +37,8 @@
 
   <ItemGroup>
     <PackageReference Include="microsoft.extensions.dependencyinjection.abstractions" Version="1.1.1" />
-    <PackageReference Include="Net.Chdk.Meta.Writers.Camera.Props" Version="0.2.0-alpha" />
-    <PackageReference Include="Net.Chdk.Meta.Writers.Camera.Ps.Core" Version="0.3.0-alpha" />
+    <PackageReference Include="Net.Chdk.Meta.Writers.Camera.Props" Version="0.4.0-alpha" />
+    <PackageReference Include="Net.Chdk.Meta.Writers.Camera.Ps.Core" Version="0.4.0-alpha" />
   </ItemGroup>
 
 </Project>
