@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>0.4.0</Version>
+    <Version>0.4.1</Version>
     <VersionSuffix>alpha</VersionSuffix>
     <Product>CHIMP</Product>
     <Authors>Dmitry Shechtman</Authors>
@@ -37,8 +37,8 @@
 
   <ItemGroup>
     <PackageReference Include="microsoft.extensions.dependencyinjection.abstractions" Version="1.1.1" />
-    <PackageReference Include="Net.Chdk.Meta.Writers.Camera.Props" Version="0.4.0-alpha" />
-    <PackageReference Include="Net.Chdk.Meta.Writers.Camera.Ps.Core" Version="0.4.0-alpha" />
+    <PackageReference Include="Net.Chdk.Meta.Writers.Camera.Props" Version="0.4.1-alpha" />
+    <PackageReference Include="Net.Chdk.Meta.Writers.Camera.Ps.Core" Version="0.4.1-alpha" />
   </ItemGroup>
 
 </Project>
